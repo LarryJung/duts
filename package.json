@@ -1,0 +1,26 @@
+{
+  "name": "duts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "duts": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LarryJung/duts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LarryJung/duts/issues"
+  },
+  "homepage": "https://github.com/LarryJung/duts#readme",
+  "dependencies": {
+    "commander": "^4.1.1"
+  }
+}
