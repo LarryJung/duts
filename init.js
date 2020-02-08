@@ -32,6 +32,9 @@ function initDirectory() {
 
 function makeDotDutsfiles(files) {
   files.forEach(file => {
+    if (file === 'README.md') {
+      return
+    }
     if (fs.lstatSync(file).isFile() && !file.startsWith(".")) {
       const dustfilePath = makeDutsfilePath(file)
       if (!fs.existsSync(dustfilePath)) {
