@@ -36,7 +36,6 @@ function log(fileName) {
 }
 
 function convertMemo(memo) {
-  console.log(memo)
   return memo.split('|||').join(' \\n ')
 }
 

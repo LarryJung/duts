@@ -13,7 +13,6 @@ function memo(file, memo) {
   const beforeHash = `${file}${convertedMemo}${now}`
   const hash = sha256(beforeHash)
   const content = [file, now, convertedMemo, hash].join(seperator)
-  console.log(content)
   fs.appendFile(makeDutsfilePath(file), content + lineSeperator, function (err) {
     if (err) {
       console.log(`cannot memo. error: ${err}`)
