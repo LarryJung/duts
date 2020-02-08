@@ -10,7 +10,12 @@ function execCmd(cmd) {
 
 function makeDutsfilePath(file) {
   const extensionRegex = /\.[0-9a-z]+$/i
-  const dutsfileName = file.replace(extensionRegex, file.match(extensionRegex)[0] + '_duts')
+  var dutsfileName = ''
+  if (file.match(extensionRegex) === null) {
+    dutsfileName = file + '_duts'
+  } else {
+    dutsfileName = file.replace(extensionRegex, file.match(extensionRegex)[0] + '_duts')
+  }
   const dustfilePath = `${dustInitDirectoryName}/${dutsfileName}`
   return dustfilePath
 }
