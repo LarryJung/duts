@@ -21,9 +21,9 @@ function initialize(file) {
 }
 
 function initDirectory() {
-  const directoryPath = __dirname
+  const directoryPath = '.'
   console.log('path?: ' + directoryPath)
-  fs.readdir('/', (err, files) => {
+  fs.readdir(directoryPath, (err, files) => {
     if (err) {
       return console.log('Unable to scan directory: ' + err);
     }
