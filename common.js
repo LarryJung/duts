@@ -1,11 +1,21 @@
 const { exec } = require("child_process");
 
-// function execCmd(cmd) {
-//   console.log(cmd);
-//   exec(cmd)
-// }
+const dustInitDirectoryName = '.duts'
 
-module.exports = (cmd) => {
+function execCmd(cmd) {
   console.log(cmd);
   exec(cmd)
+}
+
+function makeDutsfilePath(file) {
+  const extensionRegex = /\.[0-9a-z]+$/i
+  const dutsfileName = file.replace(extensionRegex, file.match(extensionRegex)[0] + '_duts')
+  const dustfilePath = `${dustInitDirectoryName}/${dutsfileName}`
+  return dustfilePath
+}
+
+module.exports = {
+  execCmd: execCmd,
+  makeDutsfilePath: makeDutsfilePath,
+  dustInitDirectoryName: dustInitDirectoryName
 }

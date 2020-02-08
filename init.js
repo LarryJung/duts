@@ -1,8 +1,10 @@
 const path = require('path');
 const fs = require('fs');
-const execCmd = require('./common.js');
+const common = require('./common.js');
 
-const dustInitDirectoryName = '.duts'
+const execCmd = common.execCmd
+const makeDutsfilePath = common.makeDutsfilePath 
+const dustInitDirectoryName = common.dustInitDirectoryName
 
 function initialize(file) {
   if (fs.existsSync(dustInitDirectoryName)) {
@@ -37,13 +39,6 @@ function makeDotDutsfiles(files) {
       }
     }
   });
-}
-
-function makeDutsfilePath(file) {
-  const extensionRegex = /\.[0-9a-z]+$/i
-  const dutsfileName = file.replace(extensionRegex, file.match(extensionRegex)[0] + '_duts')
-  const dustfilePath = `${dustInitDirectoryName}/${dutsfileName}`
-  return dustfilePath
 }
 
 function initFile(file) {
