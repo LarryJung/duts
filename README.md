@@ -2,7 +2,7 @@
 
 command line tool that do 'memo control' of a file.
 
-##usage
+## usage
 ```
 $ dust init [file]
 ```
