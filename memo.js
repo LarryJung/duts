@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const makeDutsfilePath = common.makeDutsfilePath
 const execCmd = common.execCmd
-const seperator = '\0'
+const seperator = common.seperator
 
 function memo(file, memo) {
   const now = NOW()

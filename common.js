@@ -1,6 +1,7 @@
 const { exec } = require("child_process");
 
 const dustInitDirectoryName = '.duts'
+const seperator = '\0'
 
 function execCmd(cmd) {
   console.log(cmd);
@@ -17,5 +18,6 @@ function makeDutsfilePath(file) {
 module.exports = {
   execCmd: execCmd,
   makeDutsfilePath: makeDutsfilePath,
-  dustInitDirectoryName: dustInitDirectoryName
+  dustInitDirectoryName: dustInitDirectoryName,
+  seperator: seperator
 }
